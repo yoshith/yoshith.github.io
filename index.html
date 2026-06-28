@@ -272,7 +272,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="eyebrow"><span class="br">[</span>&nbsp;DATA SCIENTIST&nbsp;<span class="br">]</span></p>
+    <p class="eyebrow"><span class="br">[</span>&nbsp;DATA SCIENTIST&nbsp;·&nbsp;NEW YORK&nbsp;<span class="br">]</span></p>
     <h1>
       <span class="ln">Yoshith</span>
       <span class="ln ln-2">Kotla</span>
@@ -299,7 +299,7 @@
       <div class="entry-side">
         <div class="entry-idx">01</div>
         <div>
-          <h3><a href="#" data-link="sealevel">Sea Level Analysis</a></h3>
+          <h3><a href="https://earth2100.onrender.com" target="_blank" rel="noopener">Sea Level Analysis</a></h3>
           <div class="kicker">Interactive map · NOAA tide-gauge data</div>
           <div class="stack">
             <span class="chip">Node.js</span><span class="chip">Express</span>
@@ -343,8 +343,7 @@
         </details>
 
         <div class="links">
-          <a href="#" data-link="sealevel-live">live&nbsp;<span class="arr">→</span></a>
-          <a href="#" data-link="sealevel-code">code&nbsp;<span class="arr">→</span></a>
+          <a href="https://earth2100.onrender.com" target="_blank" rel="noopener">visit&nbsp;earth2100&nbsp;<span class="arr">→</span></a>
         </div>
       </div>
     </article>
@@ -354,7 +353,7 @@
       <div class="entry-side">
         <div class="entry-idx">02</div>
         <div>
-          <h3><a href="#" data-link="troo">Troo News</a></h3>
+          <h3><a href="https://troonewsv2.onrender.com" target="_blank" rel="noopener">Troo News</a></h3>
           <div class="kicker">Multilingual news aggregator</div>
           <div class="stack">
             <span class="chip">Express</span><span class="chip">43 outlets</span>
@@ -372,9 +371,30 @@
           difference in framing something a reader can see at a glance instead of
           guessing at.
         </p>
+        <details class="math">
+          <summary>The math behind matching a story across outlets</summary>
+          <p class="note">
+            The hard part is deciding that a Hindi report and an English one are the same
+            event. Each article becomes a vector, and two articles are judged similar by
+            the cosine of the angle between their vectors:
+          </p>
+          <code class="eq">cos(θ) = (A · B) / (‖A‖ · ‖B‖)</code>
+          <p class="note">
+            The score runs from 0 (unrelated) to 1 (near-identical). Articles that clear a
+            similarity threshold are merged into one event cluster — that's what lets the
+            same story line up across languages and outlets instead of appearing as a dozen
+            unrelated headlines.
+          </p>
+          <p class="note">
+            The lean shown for a story is an aggregate over the outlets covering it: each
+            outlet carries a prior left–centre–right position, and the indicator summarises
+            how that coverage is distributed — so you read the spread of the room, not one
+            paper's verdict.
+          </p>
+        </details>
+
         <div class="links">
-          <a href="#" data-link="troo-live">live&nbsp;<span class="arr">→</span></a>
-          <a href="#" data-link="troo-code">code&nbsp;<span class="arr">→</span></a>
+          <a href="https://troonewsv2.onrender.com" target="_blank" rel="noopener">visit&nbsp;troo&nbsp;news&nbsp;<span class="arr">→</span></a>
         </div>
       </div>
     </article>
@@ -384,7 +404,7 @@
       <div class="entry-side">
         <div class="entry-idx">03</div>
         <div>
-          <h3><a href="#" data-link="gold">Gold Atlas</a></h3>
+          <h3><a href="https://goldatlas.onrender.com" target="_blank" rel="noopener">Gold Atlas</a></h3>
           <div class="kicker">Reserves choropleth</div>
           <div class="stack">
             <span class="chip">D3.js</span><span class="chip">TopoJSON</span>
@@ -399,9 +419,26 @@
           much gold its central bank holds — the kind of number that lives in dense
           tables and means nothing until you see who's dark on the map and who isn't.
         </p>
+        <details class="math">
+          <summary>The math behind the colour scale</summary>
+          <p class="note">
+            A choropleth is only as honest as its scale. Gold reserves are wildly skewed —
+            a handful of central banks hold thousands of tonnes while most hold almost
+            nothing — so a plain linear map from tonnes to colour would leave nearly every
+            country the same pale shade.
+          </p>
+          <code class="eq">colour = scale( reserve_tonnes ) → [ light … dark ]</code>
+          <p class="note">
+            To keep the map readable the values are spread with a quantile or log scale: a
+            quantile scale drops an equal number of countries into each colour band, while a
+            log scale compresses the long tail so differences among the smaller holders stay
+            visible. D3 does the domain→range mapping; choosing the scale is the real
+            decision.
+          </p>
+        </details>
+
         <div class="links">
-          <a href="#" data-link="gold-live">live&nbsp;<span class="arr">→</span></a>
-          <a href="#" data-link="gold-code">code&nbsp;<span class="arr">→</span></a>
+          <a href="https://goldatlas.onrender.com" target="_blank" rel="noopener">visit&nbsp;gold&nbsp;atlas&nbsp;<span class="arr">→</span></a>
         </div>
       </div>
     </article>
@@ -421,7 +458,7 @@
       <div class="entry-side">
         <div class="entry-idx">R1</div>
         <div>
-          <h3><a href="#" data-link="vacp">VACP</a></h3>
+          <h3>VACP</h3>
           <div class="kicker">Vocabulary-Aware Conformal Prediction for LLMs</div>
           <div class="stack">
             <span class="chip">Conformal prediction</span><span class="chip">LLMs</span>
@@ -452,7 +489,7 @@
       <div class="entry-side">
         <div class="entry-idx">R2</div>
         <div>
-          <h3><a href="#" data-link="drishti">Drishti <span class="muted" style="font-weight:400;">— current</span></a></h3>
+          <h3>Drishti <span class="muted" style="font-weight:400;">— current</span></h3>
           <div class="kicker">Calibrated political-bias estimation</div>
           <div class="stack">
             <span class="chip">LaBSE</span><span class="chip">HDBSCAN</span>
@@ -532,12 +569,12 @@
     <p class="eyebrow"><span class="br">[</span>&nbsp;GET IN TOUCH&nbsp;<span class="br">]</span></p>
     <h2>Let's talk about uncertainty.</h2>
     <div class="contact">
-      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="mailto:yoshith.kotla@gmail.com">yoshith.kotla@gmail.com</a>
+      <a href="https://www.linkedin.com/in/yoshithkotla/" target="_blank" rel="noopener">linkedin.com/in/yoshithkotla</a>
       <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a>
-      <a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener">linkedin.com/in/USERNAME</a>
     </div>
     <div class="colophon">
-      <span>© <span id="year"></span> Yoshith Kotla</span>
+      <span>© <span id="year"></span> Yoshith Kotla · New York, NY</span>
       <span>Built by hand · set in Space Grotesk, Newsreader &amp; JetBrains Mono</span>
     </div>
   </footer>
